@@ -55,6 +55,7 @@
             this.lvAllProcduct.Size = new System.Drawing.Size(627, 227);
             this.lvAllProcduct.TabIndex = 1;
             this.lvAllProcduct.UseCompatibleStateImageBehavior = false;
+            this.lvAllProcduct.ItemActivate += new System.EventHandler(this.lvAllProcduct_ItemActivate);
             // 
             // btnFrmProductCreate
             // 
@@ -67,6 +68,7 @@
             this.btnFrmProductCreate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnFrmProductCreate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFrmProductCreate.UseVisualStyleBackColor = true;
+            this.btnFrmProductCreate.Click += new System.EventHandler(this.btnFrmProductCreate_Click);
             // 
             // label2
             // 

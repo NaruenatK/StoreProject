@@ -1,6 +1,6 @@
 ﻿namespace StoreProject
 {
-    partial class Form1
+    partial class FrmProductCreate
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductCreate));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -36,22 +36,22 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbProName = new System.Windows.Forms.TextBox();
+            this.tbProPrice = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbProUnit = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.nudProQuan = new System.Windows.Forms.NumericUpDown();
+            this.rdoProStatusOn = new System.Windows.Forms.RadioButton();
+            this.rdoProStatusOff = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.pcbProImage = new System.Windows.Forms.PictureBox();
+            this.btProImage = new System.Windows.Forms.Button();
+            this.btSave = new System.Windows.Forms.Button();
+            this.btCancle = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.nudProQuan)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbProImage)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -91,7 +91,6 @@
             this.label7.TabIndex = 3;
             this.label7.Text = "ราคาสินค้า";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -101,7 +100,6 @@
             this.label8.TabIndex = 3;
             this.label8.Text = "จำนวนสินค้า";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label8.Click += new System.EventHandler(this.label7_Click);
             // 
             // label9
             // 
@@ -111,7 +109,6 @@
             this.label9.TabIndex = 3;
             this.label9.Text = "หน่วยสินค้า";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label9.Click += new System.EventHandler(this.label7_Click);
             // 
             // label10
             // 
@@ -121,21 +118,21 @@
             this.label10.TabIndex = 3;
             this.label10.Text = "สถานะสินค้า";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label10.Click += new System.EventHandler(this.label7_Click);
             // 
-            // textBox1
+            // tbProName
             // 
-            this.textBox1.Location = new System.Drawing.Point(142, 254);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(178, 20);
-            this.textBox1.TabIndex = 4;
+            this.tbProName.Location = new System.Drawing.Point(142, 254);
+            this.tbProName.Name = "tbProName";
+            this.tbProName.Size = new System.Drawing.Size(178, 20);
+            this.tbProName.TabIndex = 4;
             // 
-            // textBox2
+            // tbProPrice
             // 
-            this.textBox2.Location = new System.Drawing.Point(142, 281);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(178, 20);
-            this.textBox2.TabIndex = 4;
+            this.tbProPrice.Location = new System.Drawing.Point(142, 281);
+            this.tbProPrice.Name = "tbProPrice";
+            this.tbProPrice.Size = new System.Drawing.Size(178, 20);
+            this.tbProPrice.TabIndex = 4;
+            this.tbProPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbProPrice_KeyPress);
             // 
             // textBox3
             // 
@@ -144,12 +141,12 @@
             this.textBox3.Size = new System.Drawing.Size(0, 20);
             this.textBox3.TabIndex = 4;
             // 
-            // textBox4
+            // tbProUnit
             // 
-            this.textBox4.Location = new System.Drawing.Point(142, 335);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(178, 20);
-            this.textBox4.TabIndex = 4;
+            this.tbProUnit.Location = new System.Drawing.Point(142, 335);
+            this.tbProUnit.Name = "tbProUnit";
+            this.tbProUnit.Size = new System.Drawing.Size(178, 20);
+            this.tbProUnit.TabIndex = 4;
             // 
             // textBox5
             // 
@@ -158,105 +155,106 @@
             this.textBox5.Size = new System.Drawing.Size(0, 20);
             this.textBox5.TabIndex = 4;
             // 
-            // numericUpDown1
+            // nudProQuan
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(142, 309);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(178, 20);
-            this.numericUpDown1.TabIndex = 5;
+            this.nudProQuan.Location = new System.Drawing.Point(142, 309);
+            this.nudProQuan.Name = "nudProQuan";
+            this.nudProQuan.Size = new System.Drawing.Size(178, 20);
+            this.nudProQuan.TabIndex = 5;
             // 
-            // radioButton1
+            // rdoProStatusOn
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(142, 364);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(70, 17);
-            this.radioButton1.TabIndex = 6;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "พร้อมขาย";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdoProStatusOn.AutoSize = true;
+            this.rdoProStatusOn.Checked = true;
+            this.rdoProStatusOn.Location = new System.Drawing.Point(142, 364);
+            this.rdoProStatusOn.Name = "rdoProStatusOn";
+            this.rdoProStatusOn.Size = new System.Drawing.Size(70, 17);
+            this.rdoProStatusOn.TabIndex = 6;
+            this.rdoProStatusOn.TabStop = true;
+            this.rdoProStatusOn.Text = "พร้อมขาย";
+            this.rdoProStatusOn.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rdoProStatusOff
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(235, 364);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(83, 17);
-            this.radioButton2.TabIndex = 6;
-            this.radioButton2.Text = "ไม่พร้อมขาย";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdoProStatusOff.AutoSize = true;
+            this.rdoProStatusOff.Location = new System.Drawing.Point(235, 364);
+            this.rdoProStatusOff.Name = "rdoProStatusOff";
+            this.rdoProStatusOff.Size = new System.Drawing.Size(83, 17);
+            this.rdoProStatusOff.TabIndex = 6;
+            this.rdoProStatusOff.Text = "ไม่พร้อมขาย";
+            this.rdoProStatusOff.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pcbProImage);
             this.panel1.Location = new System.Drawing.Point(142, 82);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(122, 149);
             this.panel1.TabIndex = 8;
             // 
-            // button3
+            // pcbProImage
             // 
-            this.button3.Location = new System.Drawing.Point(270, 208);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(24, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "...";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.pcbProImage.Location = new System.Drawing.Point(11, 8);
+            this.pcbProImage.Name = "pcbProImage";
+            this.pcbProImage.Size = new System.Drawing.Size(100, 134);
+            this.pcbProImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbProImage.TabIndex = 1;
+            this.pcbProImage.TabStop = false;
             // 
-            // pictureBox1
+            // btProImage
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(11, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 134);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.btProImage.Location = new System.Drawing.Point(270, 208);
+            this.btProImage.Name = "btProImage";
+            this.btProImage.Size = new System.Drawing.Size(24, 23);
+            this.btProImage.TabIndex = 2;
+            this.btProImage.Text = "...";
+            this.btProImage.UseVisualStyleBackColor = true;
+            this.btProImage.Click += new System.EventHandler(this.btProImage_Click);
             // 
-            // button2
+            // btSave
             // 
-            this.button2.Image = global::StoreProject.Properties.Resources.save;
-            this.button2.Location = new System.Drawing.Point(207, 396);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 39);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "บันทึกรายการ";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btSave.Image = global::StoreProject.Properties.Resources.save;
+            this.btSave.Location = new System.Drawing.Point(207, 396);
+            this.btSave.Name = "btSave";
+            this.btSave.Size = new System.Drawing.Size(111, 39);
+            this.btSave.TabIndex = 7;
+            this.btSave.Text = "บันทึกรายการ";
+            this.btSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btSave.UseVisualStyleBackColor = true;
+            this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
-            // button1
+            // btCancle
             // 
-            this.button1.Image = global::StoreProject.Properties.Resources.cancel;
-            this.button1.Location = new System.Drawing.Point(75, 396);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 39);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "ยกเลิก";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btCancle.Image = global::StoreProject.Properties.Resources.cancel;
+            this.btCancle.Location = new System.Drawing.Point(75, 396);
+            this.btCancle.Name = "btCancle";
+            this.btCancle.Size = new System.Drawing.Size(111, 39);
+            this.btCancle.TabIndex = 7;
+            this.btCancle.Text = "ยกเลิก";
+            this.btCancle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btCancle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btCancle.UseVisualStyleBackColor = true;
+            this.btCancle.Click += new System.EventHandler(this.btCancle_Click);
             // 
-            // Form1
+            // FrmProductCreate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 461);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btProImage);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.btSave);
+            this.Controls.Add(this.btCancle);
+            this.Controls.Add(this.rdoProStatusOff);
+            this.Controls.Add(this.rdoProStatusOn);
+            this.Controls.Add(this.nudProQuan);
             this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tbProUnit);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbProPrice);
+            this.Controls.Add(this.tbProName);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -267,13 +265,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "FrmProductCreate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "เพิ่มสินค้า - บริหารการจัดการข้อมมูลสินค้า";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.Load += new System.EventHandler(this.FrmProductCreate_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nudProQuan)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbProImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,7 +279,7 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pcbProImage;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
@@ -289,18 +287,18 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbProName;
+        private System.Windows.Forms.TextBox tbProPrice;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbProUnit;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.NumericUpDown nudProQuan;
+        private System.Windows.Forms.RadioButton rdoProStatusOn;
+        private System.Windows.Forms.RadioButton rdoProStatusOff;
+        private System.Windows.Forms.Button btCancle;
+        private System.Windows.Forms.Button btSave;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btProImage;
     }
 }
 

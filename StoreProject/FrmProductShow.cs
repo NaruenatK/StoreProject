@@ -94,7 +94,7 @@ namespace StoreProject
                             if (proImage != null)
                             {
                                 imageKey = $"pro_{dataRow["proId"]}";
-                                lvAllProcduct.SmallImageList.Images.Add(proImage);
+                                lvAllProcduct.SmallImageList.Images.Add(imageKey, proImage);
                                 item.ImageKey = imageKey;
                             }
                             else
@@ -126,6 +126,23 @@ namespace StoreProject
         private void FrmProductShow_Load(object sender, EventArgs e)
         {
             // ไปคึงข้อมูลจาก product_tb มาแสดงที่ listview
+            getAllProductToLV();
+        }
+
+        private void btnFrmProductCreate_Click(object sender, EventArgs e)
+        {
+            //เปืด From นี้จาก Dialog
+            FrmProductCreate frmProductCreate = new FrmProductCreate();
+            frmProductCreate.ShowDialog();
+            getAllProductToLV();
+        }
+
+        private void lvAllProcduct_ItemActivate(object sender, EventArgs e)
+        {
+            FrmProductUpDel frmProductUpDel = new FrmProductUpDel(
+                int.Parse (lvAllProcduct.SelectedItems[0].SubItems[1].Text)
+            );
+            frmProductUpDel.ShowDialog();
             getAllProductToLV();
         }
     }
